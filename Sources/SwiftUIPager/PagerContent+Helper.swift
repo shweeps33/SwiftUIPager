@@ -66,15 +66,13 @@ extension Pager.PagerContent {
     /// Minimum offset allowed. This allows a bounce offset
     var offsetLowerbound: CGFloat {
         guard currentPage == 0, !isInifinitePager else { return CGFloat(numberOfPages) * self.size.width }
-        return CGFloat(numberOfPagesDisplayed) / 2 * pageDistance - pageDistance / 4 + alignmentOffset
+        return self.size.width
     }
 
     /// Maximum offset allowed. This allows a bounce offset
     var offsetUpperbound: CGFloat {
         guard currentPage == numberOfPages - 1, !isInifinitePager else { return -CGFloat(numberOfPages) * self.size.width }
-        let a = -CGFloat(numberOfPagesDisplayed) / 2
-        let b = pageDistance / 4
-        return a * pageDistance + b + alignmentOffset
+        return -self.size.width
     }
 
     /// Addition of `draggingOffset` and `contentOffset`
