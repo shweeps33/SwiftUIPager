@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
   s.platforms = { :ios => "13.0", :osx => "10.15", :watchos => "6.0", :tvos => "13.0" }
   s.swift_version = "5.1"
 
-  s.source       = { :git => "https://github.com/fermoya/SwiftUIPager.git", :tag => "#{s.version}" }
+  s.source       = { :git => "https://github.com/shweeps33/SwiftUIPager.git", :tag => "#{s.version}" }
   s.source_files  = "Sources/SwiftUIPager/**/*.swift"
 
   s.documentation_url = "https://github.com/fermoya/SwiftUIPager/blob/master/README.md"
